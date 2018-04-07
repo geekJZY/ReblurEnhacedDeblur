@@ -10,6 +10,9 @@ def train(opt, data_loader, model, visualizer):
 	dataset_size = len(data_loader)
 	print('#training images = %d' % dataset_size)
 	total_steps = 0
+	print("load model successed")
+	model.save('latest')
+	model.save(opt.epoch_count)
 	for epoch in range(opt.epoch_count, opt.niter + opt.niter_decay + 1):
 		epoch_start_time = time.time()
 		epoch_iter = 0

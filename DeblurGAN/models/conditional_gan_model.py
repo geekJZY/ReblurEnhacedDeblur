@@ -128,6 +128,10 @@ class ConditionalGAN(BaseModel):
 		self.save_network(self.netG, 'G', label, self.gpu_ids)
 		self.save_network(self.netD, 'D', label, self.gpu_ids)
 
+	def load(self, label):
+		self.load_network(self.netG, 'G', label)
+		self.load_network(self.netD, 'D', label)
+
 	def update_learning_rate(self):
 		lrd = self.opt.lr / self.opt.niter_decay
 		lr = self.old_lr - lrd
