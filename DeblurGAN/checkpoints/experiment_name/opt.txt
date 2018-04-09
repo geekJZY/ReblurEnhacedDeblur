@@ -1,16 +1,16 @@
 ------------ Options -------------
-batchSize: 8
+batchSize: 1
 beta1: 0.5
 checkpoints_dir: ./checkpoints
-continue_train: True
-dataroot: ../../../GOPRO_for_reblurGAN/
+continue_train: False
+dataroot: /scratch/user/jiangziyu/data/GOPRO_for_reblurGAN/
 dataset_mode: aligned
 display_freq: 100
 display_id: 1
 display_port: 8097
 display_single_pane_ncols: 0
 display_winsize: 256
-epoch_count: 85
+epoch_count: 1
 fineSize: 256
 gan_type: wgan-gp
 gpu_ids: [0]
@@ -40,7 +40,7 @@ output_nc: 3
 phase: 
 pool_size: 50
 print_freq: 100
-resize_or_crop: crop
+resize_or_crop: scale_width
 save_epoch_freq: 5
 save_latest_freq: 5000
 serial_batches: False
