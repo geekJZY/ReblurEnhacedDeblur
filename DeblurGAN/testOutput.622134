@@ -1,0 +1,1289 @@
+['TestingModel.py', '--dataroot', '/scratch/user/jiangziyu/test/', '--model', 'test', '--dataset_mode', 'single', '--learn_residual', '--resize_or_crop', 'False']
+------------ Options -------------
+aspect_ratio: 1.0
+batchSize: 1
+checkpoints_dir: ./checkpoints
+dataroot: /scratch/user/jiangziyu/test/
+dataset_mode: single
+display_id: 1
+display_port: 8097
+display_single_pane_ncols: 0
+display_winsize: 256
+fineSize: 256
+gan_type: wgan-gp
+gpu_ids: [0]
+how_many: 5000
+input_nc: 3
+isTrain: False
+learn_residual: True
+loadSizeX: 640
+loadSizeY: 360
+max_dataset_size: inf
+model: test
+nThreads: 2
+n_layers_D: 3
+name: experiment_name
+ndf: 64
+ngf: 64
+no_dropout: False
+no_flip: False
+norm: instance
+ntest: inf
+output_nc: 3
+phase: test
+resize_or_crop: False
+results_dir: ./results/
+serial_batches: False
+which_direction: AtoB
+which_epoch: latest
+which_model_netD: basic
+which_model_netG: resnet_9blocks
+-------------- End ----------------
+---------- Networks initialized -------------
+DataParallel(
+  (module): ResnetGenerator(
+    (model): Sequential(
+      (0): ReflectionPad2d((3, 3, 3, 3))
+      (1): Conv2d(3, 64, kernel_size=(7, 7), stride=(1, 1))
+      (2): InstanceNorm2d(64, eps=1e-05, momentum=0.1, affine=False)
+      (3): ReLU(inplace)
+      (4): Conv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (5): InstanceNorm2d(128, eps=1e-05, momentum=0.1, affine=False)
+      (6): ReLU(inplace)
+      (7): Conv2d(128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1))
+      (8): InstanceNorm2d(256, eps=1e-05, momentum=0.1, affine=False)
+      (9): ReLU(inplace)
+      (10): ResnetBlock(
+        (conv_block): Sequential(
+          (0): ReflectionPad2d((1, 1, 1, 1))
+          (1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1))
+          (2): InstanceNorm2d(256, eps=1e-05, momentum=0.1, affine=False)
+          (3): ReLU(inplace)
+          (4): Dropout(p=0.5)
+          (5): ReflectionPad2d((1, 1, 1, 1))
+          (6): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1))
+          (7): InstanceNorm2d(256, eps=1e-05, momentum=0.1, affine=False)
+        )
+      )
+      (11): ResnetBlock(
+        (conv_block): Sequential(
+          (0): ReflectionPad2d((1, 1, 1, 1))
+          (1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1))
+          (2): InstanceNorm2d(256, eps=1e-05, momentum=0.1, affine=False)
+          (3): ReLU(inplace)
+          (4): Dropout(p=0.5)
+          (5): ReflectionPad2d((1, 1, 1, 1))
+          (6): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1))
+          (7): InstanceNorm2d(256, eps=1e-05, momentum=0.1, affine=False)
+        )
+      )
+      (12): ResnetBlock(
+        (conv_block): Sequential(
+          (0): ReflectionPad2d((1, 1, 1, 1))
+          (1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1))
+          (2): InstanceNorm2d(256, eps=1e-05, momentum=0.1, affine=False)
+          (3): ReLU(inplace)
+          (4): Dropout(p=0.5)
+          (5): ReflectionPad2d((1, 1, 1, 1))
+          (6): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1))
+          (7): InstanceNorm2d(256, eps=1e-05, momentum=0.1, affine=False)
+        )
+      )
+      (13): ResnetBlock(
+        (conv_block): Sequential(
+          (0): ReflectionPad2d((1, 1, 1, 1))
+          (1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1))
+          (2): InstanceNorm2d(256, eps=1e-05, momentum=0.1, affine=False)
+          (3): ReLU(inplace)
+          (4): Dropout(p=0.5)
+          (5): ReflectionPad2d((1, 1, 1, 1))
+          (6): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1))
+          (7): InstanceNorm2d(256, eps=1e-05, momentum=0.1, affine=False)
+        )
+      )
+      (14): ResnetBlock(
+        (conv_block): Sequential(
+          (0): ReflectionPad2d((1, 1, 1, 1))
+          (1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1))
+          (2): InstanceNorm2d(256, eps=1e-05, momentum=0.1, affine=False)
+          (3): ReLU(inplace)
+          (4): Dropout(p=0.5)
+          (5): ReflectionPad2d((1, 1, 1, 1))
+          (6): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1))
+          (7): InstanceNorm2d(256, eps=1e-05, momentum=0.1, affine=False)
+        )
+      )
+      (15): ResnetBlock(
+        (conv_block): Sequential(
+          (0): ReflectionPad2d((1, 1, 1, 1))
+          (1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1))
+          (2): InstanceNorm2d(256, eps=1e-05, momentum=0.1, affine=False)
+          (3): ReLU(inplace)
+          (4): Dropout(p=0.5)
+          (5): ReflectionPad2d((1, 1, 1, 1))
+          (6): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1))
+          (7): InstanceNorm2d(256, eps=1e-05, momentum=0.1, affine=False)
+        )
+      )
+      (16): ResnetBlock(
+        (conv_block): Sequential(
+          (0): ReflectionPad2d((1, 1, 1, 1))
+          (1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1))
+          (2): InstanceNorm2d(256, eps=1e-05, momentum=0.1, affine=False)
+          (3): ReLU(inplace)
+          (4): Dropout(p=0.5)
+          (5): ReflectionPad2d((1, 1, 1, 1))
+          (6): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1))
+          (7): InstanceNorm2d(256, eps=1e-05, momentum=0.1, affine=False)
+        )
+      )
+      (17): ResnetBlock(
+        (conv_block): Sequential(
+          (0): ReflectionPad2d((1, 1, 1, 1))
+          (1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1))
+          (2): InstanceNorm2d(256, eps=1e-05, momentum=0.1, affine=False)
+          (3): ReLU(inplace)
+          (4): Dropout(p=0.5)
+          (5): ReflectionPad2d((1, 1, 1, 1))
+          (6): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1))
+          (7): InstanceNorm2d(256, eps=1e-05, momentum=0.1, affine=False)
+        )
+      )
+      (18): ResnetBlock(
+        (conv_block): Sequential(
+          (0): ReflectionPad2d((1, 1, 1, 1))
+          (1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1))
+          (2): InstanceNorm2d(256, eps=1e-05, momentum=0.1, affine=False)
+          (3): ReLU(inplace)
+          (4): Dropout(p=0.5)
+          (5): ReflectionPad2d((1, 1, 1, 1))
+          (6): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1))
+          (7): InstanceNorm2d(256, eps=1e-05, momentum=0.1, affine=False)
+        )
+      )
+      (19): ConvTranspose2d(256, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), output_padding=(1, 1))
+      (20): InstanceNorm2d(128, eps=1e-05, momentum=0.1, affine=False)
+      (21): ReLU(inplace)
+      (22): ConvTranspose2d(128, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), output_padding=(1, 1))
+      (23): InstanceNorm2d(64, eps=1e-05, momentum=0.1, affine=False)
+      (24): ReLU(inplace)
+      (25): ReflectionPad2d((3, 3, 3, 3))
+      (26): Conv2d(64, 3, kernel_size=(7, 7), stride=(1, 1))
+      (27): Tanh()
+    )
+  )
+)
+Total number of parameters: 11378179
+-----------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+job done!

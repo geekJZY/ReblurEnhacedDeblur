@@ -3,6 +3,7 @@ from collections import OrderedDict
 import util.util as util
 from .base_model import BaseModel
 from . import networks
+import numpy as np
 
 
 class TestModel(BaseModel):
@@ -20,6 +21,8 @@ class TestModel(BaseModel):
         which_epoch = opt.which_epoch
         self.load_network(self.netG, 'G', which_epoch)
 #         self.netG.cuda()
+        for param in self.netG.parameters():
+                param.requires_grad=False
         print('---------- Networks initialized -------------')
         networks.print_network(self.netG)
         print('-----------------------------------------------')
@@ -27,6 +30,7 @@ class TestModel(BaseModel):
     def set_input(self, input):
         # we need to use single_dataset mode
         input_A = input['image']
+        self.inputB = input['label']
         temp = self.input_A.clone()
         temp.resize_(input_A.size()).copy_(input_A)
         self.input_A = temp
@@ -37,6 +41,7 @@ class TestModel(BaseModel):
 
 
     def get_current_visuals(self):
-        real_A = util.tensor2im(self.real_A.data)
+        real_B = self.inputB[0,:,:,:].cpu().numpy()
+        real_B = (np.transpose(real_B, (1, 2, 0)) + 1) / 2.0 * 255.0
         fake_B = util.tensor2im(self.fake_B.data)
-        return OrderedDict([('real_A', real_A), ('fake_B', fake_B)])
+        return OrderedDict([('real_B', real_B.astype(np.uint8)), ('fake_B', fake_B)])

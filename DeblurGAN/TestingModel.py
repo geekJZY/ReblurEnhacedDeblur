@@ -53,13 +53,14 @@ for i, data in enumerate(data_loader):
     model.set_input(data)
     model.test()
     visuals = model.get_current_visuals()
-    avgPSNR += compare_psnr(visuals['real_A'],visuals['fake_B'])
-    avgSSIM += compare_ssim(visuals['real_A'],visuals['fake_B'],multichannel = True)
-    print('process image... %s' % str(i))
+    avgPSNR += compare_psnr(visuals['real_B'],visuals['fake_B'])
+    avgSSIM += compare_ssim(visuals['real_B'],visuals['fake_B'],multichannel = True)
+    print('process image... %s' % str(i), file=open("outputTestofOriginalDeblurGAN.txt", "a"))
+    print()
     if(counter % 50 == 0):
-        print('PSNR = %f, SSIM = %f' % (avgPSNR/counter, avgSSIM/counter))
+        print('PSNR = %f, SSIM = %f' % (avgPSNR/counter, avgSSIM/counter), file=open("outputTestofOriginalDeblurGAN.txt", "a"))
 
 avgPSNR /= counter
 avgSSIM /= counter
-print('PSNR = %f, SSIM = %f' % (avgPSNR, avgSSIM))
+print('PSNR = %f, SSIM = %f' % (avgPSNR, avgSSIM), file=open("outputTest.txt", "a"))
 

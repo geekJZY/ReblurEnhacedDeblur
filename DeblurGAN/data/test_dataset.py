@@ -39,10 +39,10 @@ class testDataSet(BaseDataset):
             cnt = cnt + 1
         cnt = cnt - 1
         offset = offset + self.foldersLen[cnt] - 1
-        img_name = os.path.join(self.root_dir, self.folders[cnt], "sharp"
+        img_name = os.path.join(self.root_dir, self.folders[cnt], "blur"
                             ,str(self.foldersStart[cnt]+offset).zfill(6)+".png")
         sample['image'] = Image.open(img_name).convert('RGB')
-        label_name = os.path.join(os.path.join(self.root_dir, self.folders[cnt], "blur"
+        label_name = os.path.join(os.path.join(self.root_dir, self.folders[cnt], "sharp"
                                 ,str(self.foldersStart[cnt]+offset).zfill(6)+".png"))
         sample['label'] = Image.open(label_name).convert('RGB')
         sample = {key:self.transform(sample[key]) for key in sample}
