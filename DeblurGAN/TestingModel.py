@@ -62,5 +62,5 @@ for i, data in enumerate(data_loader):
 
 avgPSNR /= counter
 avgSSIM /= counter
-print('PSNR = %f, SSIM = %f' % (avgPSNR, avgSSIM), file=open("outputTest.txt", "a"))
+print('PSNR = %f, SSIM = %f' % (avgPSNR, avgSSIM), file=open("outputTestofOriginalDeblurGAN.txt", "a"))
 

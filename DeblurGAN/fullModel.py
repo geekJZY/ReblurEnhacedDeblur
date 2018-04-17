@@ -223,10 +223,10 @@ for epoch in range(num_epoch):
             print("The psnr of the blur network is: %f"% psnr_blur_PSNR)
             print("loss is %f"% loss.data[0])
             
-            print("epoch %d itr %d"% (epoch,i+1), file=open("outputFullModel.txt", "a"))
-            print("The psnr of the deblur network is: %f"% psnr_deblur_PSNR, file=open("outputFullModel.txt", "a"))
-            print("The psnr of the blur network is: %f"% psnr_blur_PSNR, file=open("outputFullModel.txt", "a"))
-            print("loss is %f"% loss.data[0], file=open("outputFullModel.txt", "a"))
+            print("epoch %d itr %d"% (epoch,i+1), file=open("outputFullModel2.txt", "a"))
+            print("The psnr of the deblur network is: %f"% psnr_deblur_PSNR, file=open("outputFullModel2.txt", "a"))
+            print("The psnr of the blur network is: %f"% psnr_blur_PSNR, file=open("outputFullModel2.txt", "a"))
+            print("loss is %f"% loss.data[0], file=open("outputFullModel2.txt", "a"))
            
         
         

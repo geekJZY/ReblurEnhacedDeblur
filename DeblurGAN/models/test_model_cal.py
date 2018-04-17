@@ -19,8 +19,8 @@ class TestModel(BaseModel):
                                       opt.which_model_netG, opt.norm, not opt.no_dropout, self.gpu_ids, False,
                                       opt.learn_residual)
         which_epoch = opt.which_epoch
+        self.netG.cuda()
         self.load_network(self.netG, 'G', which_epoch)
-#         self.netG.cuda()
         for param in self.netG.parameters():
                 param.requires_grad=False
         print('---------- Networks initialized -------------')

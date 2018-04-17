@@ -48,7 +48,7 @@ process image... 46
 process image... 47
 process image... 48
 process image... 49
-PSNR = 28.814113, SSIM = 0.847059
+PSNR = 28.808222, SSIM = 0.846744
 process image... 50
 process image... 51
 process image... 52
@@ -99,7 +99,7 @@ process image... 96
 process image... 97
 process image... 98
 process image... 99
-PSNR = 28.672710, SSIM = 0.849333
+PSNR = 28.669092, SSIM = 0.849011
 process image... 100
 process image... 101
 process image... 102
@@ -150,7 +150,7 @@ process image... 146
 process image... 147
 process image... 148
 process image... 149
-PSNR = 28.705149, SSIM = 0.860168
+PSNR = 28.704535, SSIM = 0.860003
 process image... 150
 process image... 151
 process image... 152
@@ -201,7 +201,7 @@ process image... 196
 process image... 197
 process image... 198
 process image... 199
-PSNR = 28.445912, SSIM = 0.856557
+PSNR = 28.449388, SSIM = 0.856575
 process image... 200
 process image... 201
 process image... 202
@@ -252,7 +252,7 @@ process image... 246
 process image... 247
 process image... 248
 process image... 249
-PSNR = 28.149531, SSIM = 0.846112
+PSNR = 28.154063, SSIM = 0.846240
 process image... 250
 process image... 251
 process image... 252
@@ -303,7 +303,7 @@ process image... 296
 process image... 297
 process image... 298
 process image... 299
-PSNR = 28.007101, SSIM = 0.844398
+PSNR = 28.009372, SSIM = 0.844516
 process image... 300
 process image... 301
 process image... 302
@@ -354,7 +354,7 @@ process image... 346
 process image... 347
 process image... 348
 process image... 349
-PSNR = 27.932323, SSIM = 0.849121
+PSNR = 27.935223, SSIM = 0.849261
 process image... 350
 process image... 351
 process image... 352
@@ -405,7 +405,7 @@ process image... 396
 process image... 397
 process image... 398
 process image... 399
-PSNR = 28.329019, SSIM = 0.860083
+PSNR = 28.331371, SSIM = 0.860186
 process image... 400
 process image... 401
 process image... 402
@@ -456,7 +456,7 @@ process image... 446
 process image... 447
 process image... 448
 process image... 449
-PSNR = 28.131146, SSIM = 0.846295
+PSNR = 28.136429, SSIM = 0.846573
 process image... 450
 process image... 451
 process image... 452
@@ -507,7 +507,7 @@ process image... 496
 process image... 497
 process image... 498
 process image... 499
-PSNR = 27.999958, SSIM = 0.840540
+PSNR = 28.004336, SSIM = 0.840747
 process image... 500
 process image... 501
 process image... 502
@@ -558,7 +558,7 @@ process image... 546
 process image... 547
 process image... 548
 process image... 549
-PSNR = 27.619963, SSIM = 0.829587
+PSNR = 27.622996, SSIM = 0.829706
 process image... 550
 process image... 551
 process image... 552
@@ -609,7 +609,7 @@ process image... 596
 process image... 597
 process image... 598
 process image... 599
-PSNR = 27.279352, SSIM = 0.814686
+PSNR = 27.283894, SSIM = 0.814888
 process image... 600
 process image... 601
 process image... 602
@@ -660,7 +660,7 @@ process image... 646
 process image... 647
 process image... 648
 process image... 649
-PSNR = 27.023145, SSIM = 0.805276
+PSNR = 27.026957, SSIM = 0.805441
 process image... 650
 process image... 651
 process image... 652
@@ -711,7 +711,7 @@ process image... 696
 process image... 697
 process image... 698
 process image... 699
-PSNR = 26.693166, SSIM = 0.793265
+PSNR = 26.695245, SSIM = 0.793328
 process image... 700
 process image... 701
 process image... 702
@@ -762,7 +762,7 @@ process image... 746
 process image... 747
 process image... 748
 process image... 749
-PSNR = 26.378175, SSIM = 0.784249
+PSNR = 26.380046, SSIM = 0.784301
 process image... 750
 process image... 751
 process image... 752
@@ -813,7 +813,7 @@ process image... 796
 process image... 797
 process image... 798
 process image... 799
-PSNR = 26.223094, SSIM = 0.778827
+PSNR = 26.221024, SSIM = 0.778665
 process image... 800
 process image... 801
 process image... 802
@@ -864,7 +864,7 @@ process image... 846
 process image... 847
 process image... 848
 process image... 849
-PSNR = 26.146802, SSIM = 0.774008
+PSNR = 26.144666, SSIM = 0.773838
 process image... 850
 process image... 851
 process image... 852
@@ -915,7 +915,7 @@ process image... 896
 process image... 897
 process image... 898
 process image... 899
-PSNR = 26.074248, SSIM = 0.769448
+PSNR = 26.072054, SSIM = 0.769276
 process image... 900
 process image... 901
 process image... 902
@@ -966,7 +966,7 @@ process image... 946
 process image... 947
 process image... 948
 process image... 949
-PSNR = 25.892625, SSIM = 0.762785
+PSNR = 25.889193, SSIM = 0.762560
 process image... 950
 process image... 951
 process image... 952
@@ -1017,7 +1017,7 @@ process image... 996
 process image... 997
 process image... 998
 process image... 999
-PSNR = 25.805746, SSIM = 0.758943
+PSNR = 25.802881, SSIM = 0.758729
 process image... 1000
 process image... 1001
 process image... 1002
@@ -1068,7 +1068,7 @@ process image... 1046
 process image... 1047
 process image... 1048
 process image... 1049
-PSNR = 25.750809, SSIM = 0.759076
+PSNR = 25.747913, SSIM = 0.758905
 process image... 1050
 process image... 1051
 process image... 1052
@@ -1119,7 +1119,7 @@ process image... 1096
 process image... 1097
 process image... 1098
 process image... 1099
-PSNR = 25.817257, SSIM = 0.763423
+PSNR = 25.811676, SSIM = 0.763177
 process image... 1100
 process image... 1101
 process image... 1102
@@ -1131,3 +1131,4 @@ process image... 1107
 process image... 1108
 process image... 1109
 process image... 1110
+PSNR = 25.838297, SSIM = 0.764323

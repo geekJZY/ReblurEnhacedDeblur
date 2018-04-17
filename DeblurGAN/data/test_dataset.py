@@ -33,6 +33,7 @@ class testDataSet(BaseDataset):
         images = []
         sample = {}
         cnt = 0
+        
         offset = offset + 1
         while offset > 0:
             offset = offset - self.foldersLen[cnt]
